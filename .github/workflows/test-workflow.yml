@@ -1,0 +1,16 @@
+name: Build and release Python package
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test_job_running_in_container:
+    runs-on: ubuntu-latest
+    container:
+      image: quay.io/pypa/manylinux_2_24_x86_64
+    strategy:
+      fail-fast: false
+    steps:
+    - name: say hello
+      run: echo hello!
