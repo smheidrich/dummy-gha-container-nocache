@@ -1,4 +1,4 @@
-name: Build and release Python package
+name: Test workflow
 
 on:
   push:
